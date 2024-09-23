@@ -1,0 +1,257 @@
+---------------REACT(module-3)-----------------------
+
+-React open-source web application library
+-build(develop) an maintained by facebook / meta
+
+Fetures of React-
+----------------
+-to create user interfaceu(UI)
+-create single page application(apa)
+-only one page loads/render inthe browser.index.html
+-it is a declarative application(it will not access real Dom)
+-Virtual DOM-
+----------
+-copy real dom - it is created by React
+
+diffing-
+-process of compairing vdom an rdom
+recocilation-updating only node which have undergone changes
+-reduces the loaging time -entire application wont  be reloded for each updates
+-pure function
+--------------------
+functions whose output only depends on argument
+
+-Language-
+jsx(javascript XML):-its a combination of (js ,html,css)
+
+Transpiling-
+-convertion of JSX into Browser Understanding Language
+-bebal:-bebal is a libery convert into browser Understanding Language
+
+
+Data sharing:-
+unidirectional-parent to child-with help of predifend object called props
+
+How to create a project:-
+-----------------------------
+-command:npx(node pakage executer) create-react-app projectname - port3001
+-vite - npm create vite@latest projectname - port5173
+
+files:-
+----------
+1)README.md file:-Document of this application
+2)pakage.json:-npm configration-dependencies-installed liberys
+3)pakage-lock-json-installed liberies- version and some import Fetures to run that module in the applicationo
+4)node_modules:-contains the copy of liberies installed in the application
+5).gitignore-files that need to be ignored while pushing into git repository
+6)public:-contents data available throuhout the application
+7)app-command-js file ,css file
+8)index.css-to provide globel styling
+9)reportWebvital.js- to check the performance of the website
+
+
+Component:
+---------------
+it is a basic unit of UI
+
+Fetures of Component
+---------------------
+-commponent name should start with capital letter .
+-renameing is not possible
+-extention-js ,jsx
+js codes are placed inside above return statement
+all tags inside a return function should placed in single tags
+-react fragments <></>
+
+styling
+--------
+1.inline
+ -style={{property:value}}
+ if the property has two words that second word should be start with capital letters
+2.external
+  with extension .css
+  -import the css file in the js file using import keyword
+3.css module
+ -create an external file with extension as .module.css
+ -to style more than one component by storing the data in variable.
+ -import the file in the particular component
+ -must be created inside the src folder
+
+ class should be in className
+
+ js
+ --
+ it is applied using curly bracket
+
+ functions
+ -----------
+ -functions without argument
+ functionname
+
+ -function with argument
+  -callback
+   eg.()=>{add(arg1...argn)}
+
+events -change
+-----------
+change event is used to access the value from input box-start with capitel letters
+
+type of components
+--------------------
+1.functional components - shortcut -rfce //also called stateless component
+syntax
+------
+function functionname(){
+  //js codes
+  return(
+    //div
+  )
+}
+export default functionname
+
+2.class component shortcut-rcc //statefull component
+syntax
+------
+export default class className extend component{
+  //js codes
+  render(){
+    return(
+      //div
+    )
+  }
+}
+
+Accessing particular keys from an object
+
+syntax
+---------
+{key1,.........}
+
+
+state
+-----
+it is an object which stores properties react class component {key:value}
+when the state changes its value the entire component re-render
+setState() -it is the function to change the value of state
+
+eg.this.state={cname:'swift'}
+
+lifecycle of class component
+----------------------------
+1.mounting phase-component adding to DOM
+
+ -constructor()-it intializes the state value
+ 
+ -getDerivedStateFromProps()-it returns object if the component is having any data from parents to update the state,else return null(Updates the state based on props if necessary; otherwise, returns null)
+ 
+ -render()-it renders the jsx code into browser
+ 
+ -componentDidMount()-network call(api)
+
+2.updating phase-editing of component
+ 
+ -getDerivedStateFromProps()-it returns object if the component is having any data from parents to update the state,else return null(Updates the state based on props if necessary; otherwise, returns null)
+ 
+ -shouldComponentUpdate()-returns boolean values true-if there is updation,else false
+ 
+ -render()-it renders the jsx code into browser
+ 
+ -getSnapShotBeForUpdate()-this function invokes right before the updation in the virtualDOM is reflected in realDOM
+ 
+ -componentDidUpdate()-after the DOM is updated -now handle side effects
+
+3.unmounting phase-removal of component from DOM
+
+ -componentWillUnmount()-it is used to cleanup the component before the component is removed from the DOM
+
+4.error handling phase
+ 
+ -getDerivedStateFromError()-error UI
+
+ -componentDidCatch()-return log
+
+HOOKS
+-----
+it is function that provides state and lifecycle for a functional component in react application
+-hooks are two type
+1.predefined hooks
+ -useState-inorder to create states in functional component
+ -return -state,function to change the state
+ -syntax
+ --------
+ const [state,function]=useState(intial value)
+2.custom hooks
+
+
+Rules to use hooks
+-------------------
+-import hooks from the react library
+-hooks are called at the top of the js parents
+-we cannot use hook on conditional bases
+
+conditional renderinng
+------------------------
+ternary opertaor ={condional?true : false}
+
+truthy opertaor ={condition && true}
+
+vitey
+--------
+it just a palatform
+-to buld fast application
+
+micro stack queue-
+-------------------
+
+higher pripority asynchronous api call
+
+call back queue----
+--------------------
+less priority asynch 
+eg:-set Timeout
+
+Regular expression:--
+-----------------------
+used to check pattern of the given string
+rule:-it start with up arraow
+-ends with $
+-n pattern inside the square bracket
+^[0-9a-za-z@]*{min,max}$/ 
+
+Match-
+-----------
+-match()it check weather the rege matches with the given string
+-it returns array when the expression matches with the string else return null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
